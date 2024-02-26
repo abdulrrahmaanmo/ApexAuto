@@ -1,0 +1,13 @@
+<h1>Cars Available:</h1>
+
+<% @cars.each do |c| %>
+<li>
+<%= "#{c.brand} #{c.model}" %>
+</li>
+<% end %>
+
+<%# <div class="container">
+  <div class="row">
+    <%= image_tag "APEXAUTO.png", alt: "Le Wagon", width: 400 %>
+  <%# </div> %>
+<%# </div> %>
