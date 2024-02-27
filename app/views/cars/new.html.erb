@@ -1,0 +1,12 @@
+<h1>Rent Out Your SuperCar</h1>
+<%= simple_form_for [@car] do |f| %>
+  <%= f.input :brand %>
+  <%= f.input :model %>
+  <%= f.input :seats %>
+  <%= f.input :fuel_type %>
+  <%= f.input :price_per_day %>
+  <%= f.input :automatic %>
+  <%= f.input :bluetooth %>
+  <%= f.input :color %>
+  <%= f.submit "Confirm", class: "btn btn-primary" %>
+<% end %>
