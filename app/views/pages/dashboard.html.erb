@@ -1,2 +1,6 @@
-<% @booking.each do |b| %> %>
+<h1>Your Bookings</h1>
+<% @bookings.each do |b| %>
+  <p><%= "#{b.car.brand} #{b.car.model}" %></p>
+  <p><%= "#{b.start_date} - #{b.end_date}" %></p>
+
 <% end %>
