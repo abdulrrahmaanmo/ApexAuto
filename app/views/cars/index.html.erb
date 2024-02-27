@@ -2,7 +2,7 @@
 
 <% @cars.each do |c| %>
 <li>
-<%= "#{c.brand} #{c.model}" %>
+<%= link_to "#{c.brand} #{c.model}", car_path(c), class:"text-decoration-none" %>
 </li>
 <% end %>
 
