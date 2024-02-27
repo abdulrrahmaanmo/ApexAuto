@@ -2,9 +2,11 @@
   <ul> <%= @cars.brand %>  <%= @cars.model %></ul>
   <ul> Color: <%= @cars.color %> </ul>
   <ul>  Seats: <%= @cars.seats %> </ul>
-  <ul> Price : £<%= @cars.price_per_day %> </ul>
+  <ul> Price Per Day: £<%= @cars.price_per_day %> </ul>
   <ul> Fuel type <%= @cars.fuel_type %> </ul>
   <ul> Bluetooth supported? <%= @cars.bluetooth %> </ul>
   <ul>  Is the car automatic? <%= @cars.automatic %> </ul>
   <ul></ul>
 </li>
+
+<%= link_to "Go back", cars_path %>
