@@ -1,7 +1,20 @@
-<h1>New Booking</h1>
-<%= simple_form_for [@car, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit "Submit Booking", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <h1>New Booking</h1>
+  <%= simple_form_for [@car, @booking] do |f| %>
+    <div data-controller='date-picker'>
 
+      <div class='mb-3 string required booking_start_date'>
+        <label class='form-label string required' for='dateRange'>Select Date</label>
+        <input class='form-control string required' id='dateRange' type="text" data-date-picker-target='input' data-action='change->date-picker#processDateChange'>
+      </div>
+
+      <%= f.input :start_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'start'} } %>
+      <%= f.input :end_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'end'} }  %>
+    </div>
+      <%= f.input :pick_up_location, collection: ['Woodford Green Branch', 'Brixton Branch', 'Seven Sisters Branch', 'Shoreditch Branch'] %>
+      <%= f.input :return_location, collection: ['Woodford Green Branch', 'Brixton Branch', 'Seven Sisters Branch', 'Shoreditch Branch'] %>
+      <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+  <% end %>
+
+  <%= link_to "Go To Dashboard", dashboard_path, class: "btn btn-primary mt-4"%>
+</div>
