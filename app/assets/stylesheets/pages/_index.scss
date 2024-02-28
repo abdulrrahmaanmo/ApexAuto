@@ -8,15 +8,13 @@ $grey: #E4E4DE;
 $white: #FFFFFF;
 $black: #1B1B1B;
 
-// Body styles
 body {
-  background-color: $white; /* White background */
+  background-color: $white;
 }
 
-// Heading styles
 .heading-container {
-  background-color: $grey; /* Grey background */
-  border-bottom: 1px solid darken($grey, 10%); /* Darker border */
+  background-color: $grey;
+  border-bottom: 1px solid darken($grey, 10%);
   padding: 10px;
   margin-bottom: 20px;
   width: 100%;
@@ -27,74 +25,77 @@ h1 {
   font-weight: bold;
   font-size: 1.5rem;
   margin: 0;
-  color: $black; /* Black */
+  color: $black;
 }
 
 .small-results {
   font-size: 0.8rem;
   font-weight: lighter;
-  color: $black; /* Black */
+  color: $black;
 }
 
-// Card styles
 .card {
-  padding: 16px; /* Adjust padding */
-  background-color: $white; /* White background */
-  border-radius: 12px; /* Border radius */
-  box-shadow: 0 4px 8px rgba($black, 0.1); /* Soft box shadow */
+  background-color: $white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba($black, 0.1);
   transition: box-shadow 0.3s ease;
-  margin-bottom: 20px; /* Adjust margin */
+  margin-bottom: 20px;
   position: relative;
-}
 
-.card:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 8px;
-  height: 100%;
-  background-color: $light-mint-green; /* Light mint green */
-  border-radius: 12px 0 0 12px; /* Border radius */
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    background-color: $light-mint-green;
+    border-radius: 12px 0 0 12px;
+  }
 }
 
 .card-title {
   font-size: 1rem;
   font-weight: bold;
-  color: $black; /* Black */
-  margin-bottom: 8px; /* Adjust margin */
+  color: $black;
+  margin-bottom: 8px;
+  font-family: 'din-2014', Arial, sans-serif;
+  font-size: 21px;
+  font-size: 1.3125rem;
+  letter-spacing: -.015625rem;
+  font-weight: 700;
 }
 
 .card-text {
-  color: $black; /* Black */
-  margin-bottom: 8px; /* Adjust margin */
+  color: $black;
+  margin-bottom: 8px;
 }
 
 .vehicle-pricing {
   font-weight: 600;
-  color: $black; /* Black */
+  color: $black;
   text-transform: uppercase;
   margin-bottom: 0;
 }
 
 .price-text, .total-text {
-  color: $black; /* Black */
-  margin-bottom: 4px; /* Adjust margin */
+  color: $black;
+  margin-bottom: 4px;
 }
 
 .btn-primary {
-  background-color: $light-mint-green; /* Light mint green */
-  border-color: $light-mint-green; /* Light mint green */
-  color: $white; /* White */
+  background-color: $light-mint-green;
+  border-color: $light-mint-green;
+  color: $white;
   font-weight: bold;
   text-transform: uppercase;
-  padding: 8px 16px; /* Adjust padding */
+  padding: 8px 16px;
   font-size: 0.8rem;
 }
 
 .text-decoration-none {
   text-decoration: none;
-  color: $black; /* Black */
+  color: $black;
 }
 
 .small {
@@ -104,11 +105,33 @@ h1 {
 .text-end.mb-2 {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   justify-content: center;
 }
 
 .results-count {
   font-size: 0.8rem;
   opacity: 0.7;
+}
+
+.description-title {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.image.car-image-img-fluid{
+  padding-right: 20px;
+}
+
+.car-div {
+  margin-right: 7px;
+}
+
+.best-price{
+  margin-right: 10px;
+}
+
+.vehicle-pricing {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* Adjust the color and opacity as needed */
+  display: inline-block; /* Ensures the border is only as wide as the text */
+  margin-bottom: 5px; /* Adjust the margin as needed */
 }
