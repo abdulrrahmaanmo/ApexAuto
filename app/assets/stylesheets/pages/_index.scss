@@ -1,2 +1,114 @@
 // Import page-specific CSS files here.
 @import "home";
+/* SCSS Styling for Cards */
+// Color variables
+// Color variables
+$light-mint-green: rgb(51, 51, 51);
+$grey: #E4E4DE;
+$white: #FFFFFF;
+$black: #1B1B1B;
+
+// Body styles
+body {
+  background-color: $white; /* White background */
+}
+
+// Heading styles
+.heading-container {
+  background-color: $grey; /* Grey background */
+  border-bottom: 1px solid darken($grey, 10%); /* Darker border */
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+h1 {
+  font-family: din-2014, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  color: $black; /* Black */
+}
+
+.small-results {
+  font-size: 0.8rem;
+  font-weight: lighter;
+  color: $black; /* Black */
+}
+
+// Card styles
+.card {
+  padding: 16px; /* Adjust padding */
+  background-color: $white; /* White background */
+  border-radius: 12px; /* Border radius */
+  box-shadow: 0 4px 8px rgba($black, 0.1); /* Soft box shadow */
+  transition: box-shadow 0.3s ease;
+  margin-bottom: 20px; /* Adjust margin */
+  position: relative;
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  background-color: $light-mint-green; /* Light mint green */
+  border-radius: 12px 0 0 12px; /* Border radius */
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: $black; /* Black */
+  margin-bottom: 8px; /* Adjust margin */
+}
+
+.card-text {
+  color: $black; /* Black */
+  margin-bottom: 8px; /* Adjust margin */
+}
+
+.vehicle-pricing {
+  font-weight: 600;
+  color: $black; /* Black */
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.price-text, .total-text {
+  color: $black; /* Black */
+  margin-bottom: 4px; /* Adjust margin */
+}
+
+.btn-primary {
+  background-color: $light-mint-green; /* Light mint green */
+  border-color: $light-mint-green; /* Light mint green */
+  color: $white; /* White */
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 8px 16px; /* Adjust padding */
+  font-size: 0.8rem;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+  color: $black; /* Black */
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
+.text-end.mb-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.results-count {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}

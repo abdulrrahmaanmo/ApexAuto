@@ -1,10 +1,43 @@
-<h1>Cars Available:</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="heading-container">
+      <h1>Cars Available: <small class="results-count"><%= @cars.length %> Results</small></h1>
+    </div>
+    <% @cars.each do |car| %>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <!-- Car image column -->
+            <div class="col-md-4">
+              <%= image_tag asset_path("img car.png"), alt: "#{car.brand} #{car.model}", class: "car-image img-fluid" %>
+            </div>
+            <!-- Car details column -->
+            <div class="col-md-8">
+              <h5 class="card-title"><%= "#{car.brand} #{car.model}" %></h5>
+              <p class="card-text">Description about the car goes here.</p>
+              <div class="d-flex justify-content-end align-items-center">
+                <div class="text-end text-center">
+                  <p class="vehicle-pricing">BEST PRICE</p>
+                  <p class="price-text">£<%= car.price_per_day %></p>
+                  <p class="total-text">Total</p>
+                  <%= link_to "Select", car_path(car), class: "btn btn-primary" %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
 
-<% @cars.each do |c| %>
-<li>
-<%= link_to "#{c.brand} #{c.model}", car_path(c), class:"text-decoration-none" %>
-</li>
-<% end %>
+
+
+
+
+
 
 <%# <div class="container">
   <div class="row">

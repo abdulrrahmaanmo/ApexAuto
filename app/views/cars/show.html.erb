@@ -1,13 +1,21 @@
-<li>
-  <ul> <%= @cars.brand %>  <%= @cars.model %></ul>
-  <ul> Color: <%= @cars.color %> </ul>
-  <ul>  Seats: <%= @cars.seats %> </ul>
-  <ul> Price Per Day: £<%= @cars.price_per_day %> </ul>
-  <ul> Fuel type <%= @cars.fuel_type %> </ul>
-  <ul> Bluetooth supported? <%= @cars.bluetooth %> </ul>
-  <ul>  Is the car automatic? <%= @cars.automatic %> </ul>
-  <ul></ul>
-</li>
-
-<%= link_to "Go back", cars_path %>
-<%= link_to "Rent This Car", new_car_booking_path(@cars) %>
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= "#{@cars.brand} #{@cars.model}" %></h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Color: <%= @cars.color %></li>
+            <li class="list-group-item">Seats: <%= @cars.seats %></li>
+            <li class="list-group-item">Price Per Day: £<%= @cars.price_per_day %></li>
+            <li class="list-group-item">Fuel Type: <%= @cars.fuel_type %></li>
+            <li class="list-group-item">Bluetooth Supported? <%= @cars.bluetooth ? 'Yes' : 'No' %></li>
+            <li class="list-group-item">Automatic? <%= @cars.automatic ? 'Yes' : 'No' %></li>
+          </ul>
+          <%= link_to "Go back", cars_path, class: "btn btn-secondary mt-3 me-2" %>
+          <%= link_to "Rent This Car", new_car_booking_path(@cars), class: "btn btn-primary mt-3" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
