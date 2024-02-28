@@ -46,6 +46,11 @@ car_10 = Car.new(price_per_day: 225.25, model: "Benz G-Wagon", brand: "Mercedes"
 car_10.user = user
 car_10.save
 
+Location.create(address: "Brixton")
+Location.create(address: "Shoreditch")
+Location.create(address: "Woodford Green")
+Location.create(address: "Seven Sisters")
+
 puts "Finished"
 
 #   end
