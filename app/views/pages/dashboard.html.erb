@@ -1,19 +1,16 @@
-<h1>Your Bookings</h1>
-<div class="img-background" style="background-image: url('<%= asset_path('white car.jpg') %>');">
-<% @bookings.each do |b| %>
-<div class="card mb-3">
-   <div class="card-body">
-    <h5 class="card-title"><%=
-     "#{b.car.brand}#{b.car.model}" %></h5>
-     <p class="card-text">
-      <strong>From:</strong> <%=
-       b.start_date.strftime("%m/%d/%Y - %R")  %>
- </p>
-
- <p class="card-text"><strong>Pick Up Location:</strong>
-<%= b.pick_up_location %></p>
-<p class="card-text"><strong>Return Location:</strong>
-<%= b.return_location %></p>
+<h1 class="text-center mb-4">Your Bookings</h1> <!-- Added mb-4 class for margin-bottom -->
+<div class="row">
+  <% @bookings.each do |b| %>
+    <div class="col-12 col-lg-4 col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title"><%= "#{b.car.brand} #{b.car.model}" %></h5>
+          <p class="card-text">
+           <p><%= "From - #{b.start_date.strftime("%m/%d/%Y - %R")} to #{b.end_date.strftime("%m/%d/%Y - %R")}" %></p>
+            <p><%=  "Location: #{b.location.address}" %></p>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
 </div>
-</div>
-<% end %></div>
