@@ -1,8 +1,8 @@
 <div class="wholepage">
   <div class="heading-container">
     <h1 class="headerone"> Cars Available: <small class="results-count"><%= @cars.length %> Results</small></h1>
+
   </div>
-  
   <div class="row justify-content-center">
   <div class="col-sm-8 my-3">
     <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
@@ -11,21 +11,25 @@
             class: "form-control",
             placeholder: "Type a keyword"
         %>
-        
+
       <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-  <div class="row">
-    <% @cars.each do |car| %>
-      <div class="col-md-6">
-        <div class="car-card">
-          <div class="car-card-body d-flex">
-            <!-- Car image column -->
-            <div class="col-md-4 car-div">
+<div class="row">
+  <% @cars.each do |car| %>
+    <div class="col-md-6">
+      <div class="car-card">
+        <div class="car-card-body d-flex">
+          <!-- Car image column -->
+          <div class="col-md-4 car-div">
+            <% if car.photos.first.present? %>
+              <%= cl_image_tag car.photos.first.key, alt: "#{car.brand} #{car.model}", width: "300px", height: "300px", class: "car-image " %>
+            <% else %>
               <%= image_tag asset_path("img car.png"), alt: "#{car.brand} #{car.model}", class: "car-image img-fluid" %>
-            </div>
+            <% end %>
+          </div>
             <!-- Car details column -->
             <div class="col-md-8 d-flex">
               <div class="description-title">

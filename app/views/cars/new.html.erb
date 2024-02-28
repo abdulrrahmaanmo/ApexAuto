@@ -8,5 +8,7 @@
   <%= f.input :automatic %>
   <%= f.input :bluetooth %>
   <%= f.input :color %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }%>
+
   <%= f.submit "Confirm", class: "btn btn-primary" %>
 <% end %>
