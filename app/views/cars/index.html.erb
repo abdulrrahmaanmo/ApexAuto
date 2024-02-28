@@ -8,7 +8,7 @@
       <div class="card">
         <div class="card-body d-flex">
           <!-- Car image column -->
-          <div class="col-md-4">
+          <div class="col-md-4 car-div">
             <%= image_tag asset_path("img car.png"), alt: "#{car.brand} #{car.model}", class: "car-image img-fluid" %>
           </div>
           <!-- Car details column -->
@@ -17,7 +17,7 @@
               <h5 class="card-title"><%= "#{car.brand} #{car.model}" %></h5>
               <p class="card-text">Description about the car goes here.</p>
             </div>
-            <div class="text-end">
+            <div class="text-end best-price">
               <p class="vehicle-pricing">BEST PRICE</p>
               <p class="price-text">£<%= "#{car.price_per_day}/day" %></p>
               <p class="total-text">Total</p>
