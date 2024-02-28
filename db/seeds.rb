@@ -22,6 +22,11 @@ Car.create(price_per_day: 225.25, model: "F40", brand: "Ferrari", seats: 2, colo
 Car.create(price_per_day: 225.25, model: "mc20", brand: "Maserati", seats: 2, color: "Red", automatic: true, bluetooth: true, fuel_type: "Petrol")
 Car.create(price_per_day: 225.25, model: "911", brand: "Porsche", seats: 4, color: "Black", automatic: true, bluetooth: true, fuel_type: "Petrol")
 
+Location.create(address: "Brixton")
+Location.create(address: "Shoreditch")
+Location.create(address: "Woodford Green")
+Location.create(address: "Seven Sisters")
+
 puts "Finished"
 
 #   end
