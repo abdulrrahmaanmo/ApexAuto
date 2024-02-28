@@ -4,5 +4,19 @@
   <p><%= "From - #{b.start_date.strftime("%m/%d/%Y - %R")} - #{b.end_date.strftime("%m/%d/%Y - %R")}" %></p>
   <p><%= "Pick Up Location: #{b.pick_up_location}" %></p>
   <p><%= "Return Location: #{b.return_location}" %></p>
-
 <% end %>
+
+<h1>Your Listings</h1>
+<% current_user.cars.each do |car| %>
+<p><%="#{car.brand} #{car.model}"%></p>
+<p>Seats:<%= car.seats %></p>
+<p>Bluetooth Supported ?<%=car.bluetooth%></p>
+<p>Automatic ? <%=car.automatic%></p>
+<p>Fuel Type<%=car.fuel_type%></p>
+<p>Price/Day: £<%=car.price_per_day%></p>
+<p>Color: <%=car.color%></p>
+<% end %>
+
+
+
+<% %>
