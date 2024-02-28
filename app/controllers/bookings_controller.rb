@@ -20,9 +20,10 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to list_path(@booking.dashboard), status: :see_other
   end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :return_location, :pick_up_location, :car_id, :user_id)
+    params.require(:booking).permit(:start_date, :end_date, :location_id)
   end
 end

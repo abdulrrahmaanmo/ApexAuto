@@ -11,8 +11,7 @@
       <%= f.input :start_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'start'} } %>
       <%= f.input :end_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'end'} }  %>
     </div>
-      <%= f.input :pick_up_location, collection: ['Woodford Green Branch', 'Brixton Branch', 'Seven Sisters Branch', 'Shoreditch Branch'] %>
-      <%= f.input :return_location, collection: ['Woodford Green Branch', 'Brixton Branch', 'Seven Sisters Branch', 'Shoreditch Branch'] %>
+      <%= f.association :location, collection: Location.pluck(:address, :id) %>
       <%= f.submit "Submit Booking", class: "btn btn-primary" %>
   <% end %>
 </div>
