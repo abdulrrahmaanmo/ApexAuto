@@ -1,12 +1,5 @@
-$deep-blue: #333;
-$vibrant-orange: #FF6600;
-$white: #FFF;
-$black: #000; // Adjusted to black for better contrast against white
 
-body {
-  background-color: white;
-  color: black; // Ensure text is easily readable
-}
+
 .wholepage{
   background-color: $deep-blue;
   width: 100%;
@@ -115,4 +108,3 @@ body {
   height: 1px;
   background-color: rgba($vibrant-orange, 0.2); // Faint line color
 }
-
