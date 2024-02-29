@@ -10,4 +10,11 @@ class Car < ApplicationRecord
   validates  :price_per_day, presence: true
   validates  :seats, presence: true
   validates :seats, numericality: { only_integer: true }
+
+  include PgSearch::Model
+  pg_search_scope :search_by_brand_and_model,
+  against: [ :brand, :model, :color, :fuel_type ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 end

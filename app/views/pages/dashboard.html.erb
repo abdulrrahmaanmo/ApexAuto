@@ -4,7 +4,7 @@
     <div class="col-12 col-lg-4 col-md-6">
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title"><%= "#{b.car.brand} #{b.car.model}" %></h5>
+          <h5 class="card-title"><%= "#{b.car.brand}  #{b.car.model}" %></h5>
           <p class="card-text">
            <p><%= "From - #{b.start_date.strftime("%m/%d/%Y - %R")} to #{b.end_date.strftime("%m/%d/%Y - %R")}" %></p>
             <p><%=  "Location: #{b.location.address}" %></p>
@@ -14,3 +14,13 @@
     </div>
   <% end %>
 </div>
+
+<h1>Your Listings</h1>
+<% @usercars.each do |car| %>
+<%= "#{car.brand} #{car.model}" %>
+<p><%= car.price_per_day %> </p>
+<p><%= car.color %></p>
+<p><%= car.automatic %></p>
+<p><%= car.bluetooth %></p>
+<p><%= car.fuel_type %></p>
+<% end %>
