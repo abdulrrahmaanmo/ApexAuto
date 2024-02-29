@@ -16,6 +16,9 @@ User.destroy_all
 puts "Creating Cars"
 user = User.create!(email: "test@test.com", password: "123456")
 file1 = URI.open("https://modelkars.com/wp-content/uploads/GT414-AUDI-RS3-SEDAN-green-gts-models-55.webp")
+file1p = URI.open("https://hips.hearstapps.com/hmg-prod/images/2024-audi-rs3-102-64a59d6780ff7.jpg?crop=0.872xw:0.799xh;0.0656xw,0.189xh&resize=980:*")
+file1pp = URI.open("https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/body-image/public/88-audi-rs3-2021-official-reveal-saloon-interior.jpg?itok=dlfIUG8K")
+
 file2 = URI.open("https://p7.hiclipart.com/preview/108/816/868/2017-bmw-i8-2016-bmw-i8-car-2015-bmw-i8-bmw.jpg")
 file3 = URI.open("https://i.pinimg.com/736x/e2/48/b0/e248b03b5280b4af6148f47acc1f32a4.jpg")
 file4 = URI.open("https://i.pinimg.com/originals/3c/65/e4/3c65e4cffa9ea30773735a969cdf87d0.png")
@@ -29,7 +32,10 @@ file10 = URI.open("https://s1.1zoom.me/big0/504/Brabus_G-Class_Mercedes-Benz_G63
 car_1 = Car.new(price_per_day: 77.50, model: "rs3", brand: "Audi", seats: 5, color: "Green", automatic: false, bluetooth: true, fuel_type: "Petrol")
 car_1.user = user
 car_1.photos.attach(io: file1, filename: "rs3Small.jpeg", content_type: "image/jpeg")
+car_1.photos.attach(io: file1p, filename: "2nd photo", content_type: "image/jpeg")
+car_1.photos.attach(io: file1pp, filename: "2nd photo", content_type: "image/jpeg")
 car_1.save!
+
 car_2= Car.new(price_per_day: 121.75, model: "i8", brand: "BMW", seats: 2, color: "Grey", automatic: true, bluetooth: true, fuel_type: "Petrol")
 car_2.user = user
 car_2.photos.attach(io: file2, filename: "i8greySmall.jpeg", content_type: "image/jpeg")

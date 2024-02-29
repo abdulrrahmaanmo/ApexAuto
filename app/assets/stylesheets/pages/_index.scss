@@ -1,13 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "new";
 @import "homecards";
 
 /* SCSS Styling for Cards */
 // Color variables
 // Color variables
 // Updated color theme
-
 $deep-blue: #333;
 $vibrant-orange: #FF6600;
 $white: #FFF;
@@ -104,11 +102,6 @@ h1 {
   padding: 7px;
 }
 
-.car-image {
-  height: 150px;
-  width: 100%;
-}
-
 .vehicle-pricing {
   border-bottom: 1px solid rgba($white, 0.2); // Using white for subtle contrast
   display: inline-block;
@@ -125,4 +118,3 @@ h1 {
   height: 1px;
   background-color: rgba($vibrant-orange, 0.2); // Faint line color
 }
-
