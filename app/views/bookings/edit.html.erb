@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>Edit Booking</h1>
+  <%= simple_form_for(@booking) do |f| %>
+    <div data-controller='date-picker'>
+
+      <div class='mb-3 string required booking_start_date'>
+        <label class='form-label string required' for='dateRange'>Select Date</label>
+        <input class='form-control string required' placeholder="<%= @booking.start_date.strftime("%m/%d/%Y - %R") %>% to <%= @booking.end_date.strftime("%m/%d/%Y - %R")%>" id='dateRange' type="text" data-date-picker-target='input' data-action='change->date-picker#processDateChange'>
+      </div>
+
+      <%= f.input :start_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'start'} } %>
+      <%= f.input :end_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'end'} }  %>
+    </div>
+      <%= f.association :location, collection: Location.pluck(:address, :id) %>
+      <%= f.submit "Submit Booking", class: "btn btn-primary" %>
+  <% end %>
+</div>
