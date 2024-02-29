@@ -1,7 +1,9 @@
-<div class="banner" style="background-image: url('<%= asset_path('background.jpg') %>');">
-  <div class="home-title">
-    <h1>Apex Auto</h1>
-    <a href="#" class="rent-button">Rent a Car</a>
+<div class="wholepage">
+  <div class="banner" style="background-image: url('<%= asset_path('background.jpg') %>');">
+    <div class="home-title">
+      <h1 class= "headerone" > Apex Auto </h1>
+      <%= link_to "Rent a Car", cars_path, class: "rent-button" %>
+    </div>
   </div>
 </div>
 
