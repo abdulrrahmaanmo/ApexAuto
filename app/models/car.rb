@@ -10,4 +10,5 @@ class Car < ApplicationRecord
   validates  :price_per_day, presence: true
   validates  :seats, presence: true
   validates :seats, numericality: { only_integer: true }
+  has_many_attached :photos
 end

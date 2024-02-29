@@ -9,7 +9,11 @@
         <div class="card-body d-flex">
           <!-- Car image column -->
           <div class="col-md-4 car-div">
-            <%= image_tag asset_path("img car.png"), alt: "#{car.brand} #{car.model}", class: "car-image img-fluid" %>
+            <% if car.photos.first.present? %>
+              <%= cl_image_tag car.photos.first.key, alt: "#{car.brand} #{car.model}", width: "300px", height: "300px", class: "car-image " %>
+            <% else %>
+              <%= image_tag asset_path("img car.png"), alt: "#{car.brand} #{car.model}", class: "car-image img-fluid" %>
+            <% end %>
           </div>
           <!-- Car details column -->
           <div class="col-md-8 d-flex">
