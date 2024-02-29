@@ -10,7 +10,9 @@ require "open-uri"
 
 puts "Cleaning DataBase"
 
+
 Booking.destroy_all
+Location.destroy_all
 Car.destroy_all
 User.destroy_all
 puts "Creating Cars"
