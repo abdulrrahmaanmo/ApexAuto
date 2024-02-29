@@ -9,10 +9,25 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.car = @car
     @booking.user = current_user
-    if @booking.save!
+    if @booking.save
       redirect_to dashboard_path
     else
       render :new
+    end
+  end
+
+  def edit
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+
+    if @booking.save
+      redirect_to dashboard_path
+    else
+      render :edit
     end
   end
 
