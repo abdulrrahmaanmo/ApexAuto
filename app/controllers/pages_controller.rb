@@ -13,6 +13,6 @@ class PagesController < ApplicationController
 
   def dashboard
     @bookings = current_user.bookings
-    @cars
+    @usercars = current_user.cars
   end
 end
