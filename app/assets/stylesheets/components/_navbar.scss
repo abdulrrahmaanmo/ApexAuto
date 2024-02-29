@@ -1,6 +1,13 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+// Define custom font stack
+$font-stack: 'Roboto', sans-serif;
+
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: white; /* Dark grey background */
+  font-family: $font-stack; /* Apply custom font */
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +15,27 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  max-width: 100%; /* Ensure the logo doesn't exceed the width of its container */
+  max-height: 55px; /* Set maximum height to maintain aspect ratio */
+}
+
+.navbar-toggler {
+  border: none; /* Remove border */
+}
+
+.nav-link {
+  color: #333; /* White link color */
+  font-weight: 700; /* Bold font weight */
+}
+
+.nav-link:hover {
+  color: #FF6600; /* Brighter orange hover color */
+}
+
+@media (max-width: 767.98px) {
+  /* Adjust spacing for smaller screens */
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
