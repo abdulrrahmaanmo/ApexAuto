@@ -62,6 +62,9 @@ body{
     box-shadow: 0 6px 12px rgba($black, 0.3); // Enhanced hover effect
   }
 }
+.price-text{
+  margin-bottom: 25px;
+}
 
 .car-card-title,
 .price-text,
@@ -74,10 +77,16 @@ body{
   font-family: $font-roboto; // Change font to Roboto
 }
 
-.btn-primary {
+
+.btn-fcard {
   background-color: $vibrant-orange; // Vibrant Orange for primary button
   border-color: darken($vibrant-orange, 10%);
-  color: $white;
+  color: black;
+  border-radius: 3px;
+  padding: 10px;
+  font-weight:600;
+  text-decoration: none;
+  justify-content: center;
   &:hover {
     background-color: $white; // White background on hover
     color: $vibrant-orange; // Vibrant Orange text on hover
