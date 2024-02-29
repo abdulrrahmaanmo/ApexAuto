@@ -1,25 +1,23 @@
-<div class="container-fluid">
-    <div class="bg-shadow">
-    <%= content_tag :h1, "#{@cars.brand} #{@cars.model}", class: "big-bold-header text-center" %>
-      <%= image_tag asset_path("img car.png"), class: "custom-image img-fluid" %>
-    </div>
-  <div class="row justify-content-center align-items-center vh-100">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"><%= "#{@cars.brand} #{@cars.model}" %></h5>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Color: <%= @cars.color %></li>
-            <li class="list-group-item">Seats: <%= @cars.seats %></li>
-            <li class="list-group-item">Price Per Day: £<%= @cars.price_per_day %></li>
-            <li class="list-group-item">Fuel Type: <%= @cars.fuel_type %></li>
-            <li class="list-group-item">Bluetooth Supported? <%= @cars.bluetooth ? 'Yes' : 'No' %></li>
-            <li class="list-group-item">Automatic? <%= @cars.automatic ? 'Yes' : 'No' %></li>
-          </ul>
-          <%= link_to "Go back", cars_path, class: "btn btn-secondary mt-3 me-2" %>
-          <%= link_to "Rent This Car", new_car_booking_path(@cars), class: "btn btn-primary mt-3" %>
+<div class="container-fluid py-5 car-background">
+    <div class="bg-light shadow-lg rounded main-container">
+        <div class="text-center text-white p-5 car-header">
+            <%= content_tag :h1, "#{@cars.brand} #{@cars.model}", class: "display-4 fw-bold text-shadow" %>
+            <%= image_tag asset_path("img car.png"), class: "custom-image img-fluid rounded-circle mt-3" %>
         </div>
-      </div>
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-6">
+                <div class="card border-primary shadow">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= "#{@cars.brand} #{@cars.model}" %></h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="bi bi-palette-fill"></i> Color: <%= @cars.color %></li>
+                            <!-- Add more list items here -->
+                        </ul>
+                        <%= link_to "Go back", cars_path, class: "btn custom-btn-secondary mt-3 me-2" %>
+                        <%= link_to "Rent This Car", new_car_booking_path(@cars), class: "btn custom-btn-primary mt-3" %>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

@@ -1,48 +1,50 @@
 // Import page-specific CSS files here.
 @import "home";
-@import "show";
-
 /* SCSS Styling for Cards */
 // Color variables
 // Color variables
-$light-mint-green: rgb(51, 51, 51);
-$grey: #E4E4DE;
-$white: #FFFFFF;
-$black: #1B1B1B;
+// Updated color theme
+$deep-blue: #333;
+$vibrant-orange: #FF6600;
+$white: #FFF;
+$black: #000; // Adjusted to black for better contrast against white
 
 body {
-  background-color: $white;
+  background-color: $deep-blue;
+  color: $white; // Ensure text is easily readable
 }
 
 .heading-container {
-  background-color: $grey;
-  border-bottom: 1px solid darken($grey, 10%);
+  background-color: #333; // Adjusted for better contrast
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   width: 100%;
 }
 
 h1 {
-  font-family: din-2014, Arial, sans-serif;
+  font-family: 'din-2014', Arial, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   margin: 0;
-  color: $black;
+  color: white;
+  padding-left: 10px;
 }
 
-.small-results {
+.small-results, .results-count {
   font-size: 0.8rem;
   font-weight: lighter;
-  color: $black;
+  color: rgba(255, 255, 255, 0.824); // Adjusted for better visibility
+  opacity: 0.8; // Adjust for better readability
 }
 
 .card {
   background-color: $white;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba($black, 0.1);
+  box-shadow: 0 4px 8px rgba($black, 0.2); // Slightly stronger shadow for depth
   transition: box-shadow 0.3s ease;
   margin-bottom: 20px;
   position: relative;
+  font-family: 'Helvetica Neue', Arial, sans-serif; // Change font to Helvetica Neue
 
   &:before {
     content: '';
@@ -51,53 +53,37 @@ h1 {
     left: 0;
     width: 8px;
     height: 100%;
-    background-color: $light-mint-green;
+    background-color: $vibrant-orange; // Use Vibrant Orange for a dynamic accent
     border-radius: 12px 0 0 12px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 12px rgba($black, 0.3); // Enhanced hover effect
   }
 }
 
-.card-title {
-  font-size: 1rem;
-  font-weight: bold;
-  color: $black;
-  margin-bottom: 8px;
-  font-family: 'din-2014', Arial, sans-serif;
-  font-size: 21px;
-  font-size: 1.3125rem;
-  letter-spacing: -.015625rem;
-  font-weight: 700;
+.card-title, .price-text, .total-text {
+  color: #333;
 }
 
 .card-text {
-  color: $black;
-  margin-bottom: 8px;
-}
-
-.vehicle-pricing {
-  font-weight: 600;
-  color: $black;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-.price-text, .total-text {
-  color: $black;
-  margin-bottom: 4px;
+  color: #333; // Adjusted for better contrast
+  font-family: 'Helvetica Neue', Arial, sans-serif; // Change font to Helvetica Neue
 }
 
 .btn-primary {
-  background-color: $light-mint-green;
-  border-color: $light-mint-green;
+  background-color: $vibrant-orange; // Vibrant Orange for primary button
+  border-color: darken($vibrant-orange, 10%);
   color: $white;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 8px 16px;
-  font-size: 0.8rem;
+  &:hover {
+    background-color: $white; // White background on hover
+    color: $vibrant-orange; // Vibrant Orange text on hover
+  }
 }
 
 .text-decoration-none {
   text-decoration: none;
-  color: $black;
+  color: $white; // Ensuring readability
 }
 
 .small {
@@ -110,30 +96,23 @@ h1 {
   justify-content: center;
 }
 
-.results-count {
-  font-size: 0.8rem;
-  opacity: 0.7;
-}
-
-.description-title {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.image.car-image-img-fluid{
-  padding-right: 20px;
-}
-
-.car-div {
-  margin-right: 7px;
-}
-
-.best-price{
-  margin-right: 10px;
+.description-title, .image.car-image-img-fluid, .car-div, .best-price {
+  padding: 7px;
 }
 
 .vehicle-pricing {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3); /* Adjust the color and opacity as needed */
-  display: inline-block; /* Ensures the border is only as wide as the text */
-  margin-bottom: 5px; /* Adjust the margin as needed */
+  border-bottom: 1px solid rgba($white, 0.2); // Using white for subtle contrast
+  display: inline-block;
+  color: $vibrant-orange; // Set color to Vibrant Orange
+  position: relative; // Position relative for absolute positioning of the faint line
+}
+
+.vehicle-pricing::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; // Adjust as needed
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgba($vibrant-orange, 0.2); // Faint line color
 }
