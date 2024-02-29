@@ -17,8 +17,8 @@ $vibrant-orange: #FF6600;
 
 .banner {
   background-size: cover; /* Cover the entire area of the banner */
-  background-position: 50% 50%; /* Center the background image */
-  height: 800px; /* Adjust the height of the banner */
+  background-position: 90% 10%; /* Center the background image */
+  height: 575px; /* Adjust the height of the banner */
 }
 
 .home-title {
@@ -39,8 +39,7 @@ $vibrant-orange: #FF6600;
 
 
 .rent-button {
-  display: inline-block; /* Make button display inline */
-  margin-top: 20px; /* Add space between title and button */
+  display: inline-block; /* Make button display inline */ /* Add space between title and button */
   padding: 15px 30px; /* Increase padding to make the button bigger */
   font-size: 17px;
   background-color: $vibrant-orange; /* Set button background color */
