@@ -1,5 +1,11 @@
-
-
+body{
+  background-color: $white;
+  color: $black;
+}
+.car-image {
+  height: 150px;
+  width: 100%;
+}
 .wholepage{
   background-color: $deep-blue;
   width: 100%;

@@ -1,4 +1,5 @@
-<h1>Rent Out Your SuperCar</h1>
+<h1 class="title">Rent Out Your SuperCar</h1>
+<div class="col-sm-6 car-form">
 <%= simple_form_for [@car] do |f| %>
   <%= f.input :brand %>
   <%= f.input :model %>
@@ -12,3 +13,4 @@
 
   <%= f.submit "Confirm", class: "btn btn-primary" %>
 <% end %>
+</div>
