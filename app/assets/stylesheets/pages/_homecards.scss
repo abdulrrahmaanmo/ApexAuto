@@ -1,21 +1,16 @@
-// Import page-specific CSS files here.
-@import "home";
-@import "new";
-@import "homecards";
-
-/* SCSS Styling for Cards */
-// Color variables
-// Color variables
-// Updated color theme
-
 $deep-blue: #333;
 $vibrant-orange: #FF6600;
 $white: #FFF;
 $black: #000; // Adjusted to black for better contrast against white
 
 body {
+  background-color: white;
+  color: black; // Ensure text is easily readable
+}
+.wholepage{
   background-color: $deep-blue;
-  color: $white; // Ensure text is easily readable
+  width: 100%;
+  height: 100%;
 }
 
 .heading-container {
@@ -25,7 +20,7 @@ body {
   width: 100%;
 }
 
-h1 {
+.headerone {
   font-family: 'din-2014', Arial, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
@@ -41,7 +36,7 @@ h1 {
   opacity: 0.8; // Adjust for better readability
 }
 
-.card {
+.car-card{
   background-color: $white;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba($black, 0.2); // Slightly stronger shadow for depth
@@ -66,11 +61,11 @@ h1 {
   }
 }
 
-.card-title, .price-text, .total-text {
+.car-card-title, .price-text, .total-text {
   color: #333;
 }
 
-.card-text {
+.car-card-text {
   color: #333; // Adjusted for better contrast
   font-family: 'Helvetica Neue', Arial, sans-serif; // Change font to Helvetica Neue
 }
@@ -102,11 +97,6 @@ h1 {
 
 .description-title, .image.car-image-img-fluid, .car-div, .best-price {
   padding: 7px;
-}
-
-.car-image {
-  height: 150px;
-  width: 100%;
 }
 
 .vehicle-pricing {

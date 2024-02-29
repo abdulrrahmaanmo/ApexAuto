@@ -11,4 +11,10 @@ class Car < ApplicationRecord
   validates  :seats, presence: true
   validates :seats, numericality: { only_integer: true }
   has_many_attached :photos
+  include PgSearch::Model
+  pg_search_scope :search_by_brand_and_model,
+  against: [ :brand, :model, :color, :fuel_type ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 end
