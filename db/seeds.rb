@@ -10,7 +10,6 @@ require "open-uri"
 
 puts "Cleaning DataBase"
 
-
 Booking.destroy_all
 Location.destroy_all
 Car.destroy_all
@@ -22,7 +21,7 @@ file1 = URI.open("https://modelkars.com/wp-content/uploads/GT414-AUDI-RS3-SEDAN-
 file1p = URI.open("https://hips.hearstapps.com/hmg-prod/images/2024-audi-rs3-102-64a59d6780ff7.jpg?crop=0.872xw:0.799xh;0.0656xw,0.189xh&resize=980:*")
 file1pp = URI.open("https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/body-image/public/88-audi-rs3-2021-official-reveal-saloon-interior.jpg?itok=dlfIUG8K")
 
-file2 = URI.open("https://static.wikia.nocookie.net/jetix-academy/images/5/54/20151526_201408.jpg/revision/latest?cb=20200202154403")
+file2 = URI.open("https://img.driv.ly/11014/cc1280_032_B97.jpg")
 file2p = URI.open("https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/2-bmw-i8-coupe-2018-uk-fd-hero-rear.jpg")
 file2pp = URI.open("https://car-images.bauersecure.com/wp-images/1646/zbmw-078.jpg")
 
@@ -121,7 +120,7 @@ car_9.photos.attach(io: file9pp, filename: "bluemc20Small.jpeg", content_type: "
 car_9.photos.attach(io: file9p, filename: "bluemc20Small.jpeg", content_type: "image/jpeg")
 car_9.save
 
-car_10 = Car.new(price_per_day: 225.25, model: "Benz G-Wagon", brand: "Mercedes", seats: 4, color: "Black", automatic: true, bluetooth: true, fuel_type: "Petrol")
+car_10 = Car.new(price_per_day: 225.25, model: "G-Wagon", brand: "Mercedes", seats: 4, color: "Black", automatic: true, bluetooth: true, fuel_type: "Petrol")
 car_10.user = user
 car_10.photos.attach(io: file10, filename: "gwagblackSmall.jpeg", content_type: "image/jpeg")
 car_10.photos.attach(io: file10p, filename: "gwagblackSmall.jpeg", content_type: "image/jpeg")
@@ -134,5 +133,4 @@ Location.create(address: "Woodford Green")
 Location.create(address: "Seven Sisters")
 
 puts "Finished"
-
 #   end
