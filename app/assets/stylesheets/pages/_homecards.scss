@@ -1,42 +1,54 @@
+$deep-blue: #333;
+$vibrant-orange: #FF6600;
+$white: #FFF;
+$black: #000; // Adjusted to black for better contrast against white
 
+$font-montserrat: 'Montserrat', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
 
-.wholepage{
+body {
+  background-color: white;
+  color: black; // Ensure text is easily readable
+}
+
+.wholepage {
   background-color: $deep-blue;
   width: 100%;
-  height: 100%;
 }
 
 .heading-container {
   background-color: #333; // Adjusted for better contrast
-  padding: 10px;
   margin-bottom: 17px;
   width: 100%;
 }
 
 .headerone {
-  font-family: 'din-2014', Arial, sans-serif;
+  font-family: $font-montserrat; // Change font to Montserrat
   font-weight: bold;
   font-size: 1.5rem;
   margin: 0;
   color: white;
   padding-left: 10px;
+  padding-top: 11px;
 }
 
-.small-results, .results-count {
+.small-results,
+.results-count {
   font-size: 0.8rem;
   font-weight: lighter;
   color: rgba(255, 255, 255, 0.824); // Adjusted for better visibility
   opacity: 0.8; // Adjust for better readability
 }
 
-.car-card{
+.car-card {
   background-color: $white;
+  width: 640px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba($black, 0.2); // Slightly stronger shadow for depth
   transition: box-shadow 0.3s ease;
   margin-bottom: 20px;
   position: relative;
-  font-family: 'Helvetica Neue', Arial, sans-serif; // Change font to Helvetica Neue
+  font-family: $font-roboto; // Change font to Roboto
 
   &:before {
     content: '';
@@ -54,13 +66,15 @@
   }
 }
 
-.car-card-title, .price-text, .total-text {
+.car-card-title,
+.price-text,
+.total-text {
   color: #333;
 }
 
 .car-card-text {
   color: #333; // Adjusted for better contrast
-  font-family: 'Helvetica Neue', Arial, sans-serif; // Change font to Helvetica Neue
+  font-family: $font-roboto; // Change font to Roboto
 }
 
 .btn-primary {
@@ -88,8 +102,15 @@
   justify-content: center;
 }
 
-.description-title, .image.car-image-img-fluid, .car-div, .best-price {
+.description-title,
+.image.car-image-img-fluid,
+.car-div,
+.best-price {
   padding: 7px;
+}
+
+.best-price {
+  padding-left: 20px;
 }
 
 .vehicle-pricing {
@@ -107,4 +128,18 @@
   width: 100%;
   height: 1px;
   background-color: rgba($vibrant-orange, 0.2); // Faint line color
+}
+
+.car-image {
+  height: 150px;
+  width: 100%;
+}
+
+.searchbar {
+  padding-bottom: 30px;
+  border-radius: 4px;
+}
+
+.full-car-card {
+  padding: 0 40px;
 }
