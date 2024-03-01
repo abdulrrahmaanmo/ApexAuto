@@ -1,17 +1,14 @@
-$deep-blue: #333;
-$vibrant-orange: #FF6600;
-$white: #FFF;
-$black: #000; // Adjusted to black for better contrast against white
 
 $font-montserrat: 'Montserrat', sans-serif;
 $font-roboto: 'Roboto', sans-serif;
 
-body {
-  background-color: white;
-  color: black; // Ensure text is easily readable
+body{
+  background-color: $white;
+  color: $black;
 }
 
 .wholepage {
+
   background-color: $deep-blue;
   width: 100%;
 }

@@ -1,20 +1,22 @@
 <div class="background-page">
-<h1 class="text-center mb-4">Your Bookings</h1> <!-- Added mb-4 class for margin-bottom -->
+<h1 class="text-center mb-4 booking-header">Your Bookings</h1> <!-- Added mb-4 class for margin-bottom -->
 <div class="row">
   <% @bookings.each do |b| %>
     <div class="col-12 col-lg-4 col-md-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title"><%= "#{b.car.brand}  #{b.car.model}" %></h5>
-          <p class="card-text">
+      <div class="booking-card">
+        <div class="card-content">
+          <h5 class="card-name"><%= "#{b.car.brand}  #{b.car.model}" %></h5>
+          <p class="card-script">
            <p><%= "From - #{b.start_date.strftime("%m/%d/%Y - %R")} to #{b.end_date.strftime("%m/%d/%Y - %R")}" %></p>
             <p><%=  "Location: #{b.location.address}" %></p>
-            <div class="d-flex justfiy-content-between w-100">
+            <div class="d-flex w-50 btn">
             <%= link_to "Edit Booking", edit_booking_path(b) %>
-            <%= link_to "Delete",
-  booking_path(b),
+            </div>
+<div class="d-flex w-50 btn">
+            <%= link_to "Delete", booking_path(b),
   data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
 %>
+
             </div>
           </p>
         </div>
@@ -23,12 +25,12 @@
   <% end %>
 </div>
 
-<h1 class="text-center mb-4">Your Listings</h1>
+<h1 class="text-center mb-4 list-header">Your Listings</h1>
 <div class="row">
 <% @usercars.each do |car| %>
 <div class="col-12 col-lg-4 col-md-6">
- <div class="card">
- <div class="card-body">
+ <div class="listing-card">
+ <div class="card-content">
      <i class="fa-solid fa-car"></i> <%= "#{car.brand} #{car.model}" %>
  <p><i class="fa-solid fa-money-bill"></i> £<%= car.price_per_day %> </p>
  <p><i class="fa-solid fa-paintbrush"></i> <%= car.color %></p>

@@ -3,32 +3,42 @@
     background-color: $gray;
     color: $black;
   }
-  .card {
+  .booking-card, .listing-card {
     background-color: $light-gray;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba($black, 0.2); // Slightly stronger shadow for depth
     transition: box-shadow 0.3s ease;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     position: relative;
     font-family: 'Helvetica Neue', Arial, sans-serif;
+    padding: 5%;
   }
 
-  h1 {
-  color: $black;
-  font-style: normal;
-  }
 
-  .card-title, .card-text {
+  .card-name, .card-script {
     color: $orange;
   }
-  .card-body {
+  .card-content {
     font-family: 'Helvetica Neue', Arial, sans-serif;
   }
 
-  .card:hover {
+  .booking-card, .listing-card:hover {
     box-shadow: 0 6px 12px rgba($black, 0.8);
   }
 
-  h1:hover {
-  text-shadow: 0 6px 12px rgba($black, 0.5);
+  .list-header, .booking-header {
+    color: black;
+  }
+  .list-header, .booking-header:hover{
+    text-shadow: 0 6px 12px rgba($white, 0.5);
+  }
+  .btn {
+    border: 1px solid;
+    border-radius: 10px;
+    background-color: orange;
+    justify-content: space-between;
+    padding: 2%;
+    margin-bottom: 3px;
+    text-decoration: none;
+    color:black;
   }
