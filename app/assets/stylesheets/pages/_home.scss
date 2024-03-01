@@ -1,6 +1,25 @@
 // Specific CSS for your home-page
 $vibrant-orange: #FF6600;
+$deep-blue: #333;
+$font-montserrat: 'Montserrat', sans-serif;
+$font-roboto: 'Roboto', sans-serif;
 
+/* Apply Montserrat font to headers */
+.home-title h1,
+.headertwo,
+.service-title,
+.slogan-text {
+  font-family: $font-montserrat;
+}
+
+/* Apply Roboto font to paragraphs */
+.offer-card,
+.services-card p,
+.rental-description
+.rent-button
+.offer {
+  font-family: $font-roboto;
+}
 .banner {
  /* Use asset_path helper to reference the image */
   background-size: cover; /* Cover the entire area of the banner */
@@ -11,19 +30,24 @@ $vibrant-orange: #FF6600;
   padding-top: 50px; /* Adjust top padding to vertically center content */
   width: 100%;
   height: 800px;
+
 }
 
+.headerone {
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
 /* home.scss */
 
 .banner {
   background-size: cover; /* Cover the entire area of the banner */
   background-position: 90% 10%; /* Center the background image */
   height: 575px; /* Adjust the height of the banner */
+  margin-bottom: 40px;
 }
 
 .home-title {
   position: absolute; /* Position the title on top of the banner */
-  top: 25%; /* Align the title vertically */
+  top: 23%; /* Align the title vertically */
   left: 50%; /* Align the title horizontally */
   transform: translate(-50%, -50%); /* Center the title */
   text-align: center; /* Center the text horizontally */
@@ -33,7 +57,7 @@ $vibrant-orange: #FF6600;
 
 .home-title h1 {
   font-size: 59px; /* Increase font size for the title */
-  font-family: Arial, sans-serif; /* Change font family to a cleaner font */
+  // font-family: Arial, sans-serif; /* Change font family to a cleaner font */
   margin-bottom: 20px; /* Add space below the title */
 }
 
@@ -46,8 +70,113 @@ $vibrant-orange: #FF6600;
   color: #fff; /* Set button text color */
   text-decoration: none; /* Remove default underline */
   border-radius: 5px; /* Add border radius to button */
+  font-family: $font-roboto;
+  font-weight: bolder;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6)
 }
 
 .rent-button:hover {
   background-color: #ff7f00; /* Change button background color on hover */
+}
+
+.homepage{
+  background-color: #f9f9fa;
+}
+
+.headertwo{
+  font-family: 'din-2014', Arial, sans-serif;
+  font-weight: normal;
+  font-size: 50px;
+  margin: 0;
+  color: $deep-blue;
+  padding-top: 30px;
+  text-align: center;
+  padding-bottom: 30px;
+  font-weight:700;
+}
+
+.offer-card {
+  width: 320px;
+  font-size:20px;;
+  background-color: #333;
+  padding-top: 10px;
+  border: 2px solid rgb(155, 155, 155);
+  border-radius: 4px;
+  text-align: center;
+  color: $vibrant-orange;
+  font-weight: bolder;
+  margin: 0 auto; /* Center align */
+  margin-bottom: 47px;
+}
+
+.card-whole {
+  display: flex;
+  justify-content: center; /* Center align cards horizontally */
+  gap: 55px; /* Adjust the space between cards */
+}
+
+.services-card {
+  flex-direction: column;
+  align-items: center;
+  width: 360px;
+  min-height: 240px;
+  padding: 34px;
+  border-radius: 4px;
+  background-color:  #333;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+  margin-bottom: 15px;
+}
+
+.services-card p {
+  padding-top: 16px;
+  margin: 0;
+  color:white;
+  align-items: center;
+}
+
+.service-title {
+  color:$vibrant-orange;
+  padding: 10px;
+  margin-bottom: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+// .ultimate-section {
+//   display: flex;
+// }
+
+// // .home-title {
+// //   align-self: flex-start;
+// // }
+
+// // .rental-description {
+// //   align-self: flex-start;
+// // }
+
+.slogan {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: center;
+  padding-top: 47px;
+  border: 2px solid #9b9b9b; /* Add grey border */
+  border-radius: 4px;
+}
+
+.slogan-text {
+  margin: 0;
+  font-size: 33px;
+  color: $deep-blue; /* Set text color to orange */
+  font-weight: bold; /* Set font weight to bold */
+}
+
+.rental-description {
+  padding-top: 19px;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #FF6600;
+  font-weight: 700;
 }
