@@ -60,7 +60,7 @@ file10pp = URI.open("https://parkers-images.bauersecure.com/wp-images/268/main-i
 
 car_1 = Car.new(price_per_day: 125.00, model: "rs3", brand: "Audi", seats: 5, color: "Green", automatic: false, bluetooth: true, fuel_type: "Petrol")
 car_1.user = user
-car_1.photos.attach(io: file1, filename: "rs3Small.jpeg", content_type: "image/jpeg")
+ car_1.photos.attach(io: file1, filename: "rs3Small.jpeg", content_type: "image/jpeg")
 car_1.photos.attach(io: file1p, filename: "2nd photo", content_type: "image/jpeg")
 car_1.photos.attach(io: file1pp, filename: "2nd photo", content_type: "image/jpeg")
 car_1.save!
