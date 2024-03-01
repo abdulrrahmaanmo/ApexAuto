@@ -5,8 +5,8 @@ class Car < ApplicationRecord
   validates  :brand, presence: true
   validates  :model, presence: true
   validates  :fuel_type, presence: true
-  validates  :bluetooth, inclusion: { in: [true, false] }
-  validates  :automatic, inclusion: { in: [true, false] }
+  # validates  :bluetooth, inclusion: { in: [true, false] }
+  # validates  :automatic, inclusion: { in: [true, false] }
   validates  :price_per_day, presence: true
   validates  :seats, presence: true
   validates :seats, numericality: { only_integer: true }
