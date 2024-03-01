@@ -9,14 +9,13 @@
           <p class="card-script">
            <p><%= "From - #{b.start_date.strftime("%m/%d/%Y - %R")} to #{b.end_date.strftime("%m/%d/%Y - %R")}" %></p>
             <p><%=  "Location: #{b.location.address}" %></p>
-            <div class="d-flex w-50 btn">
-            <%= link_to "Edit Booking", edit_booking_path(b) %>
-            </div>
-<div class="d-flex w-50 btn">
-            <%= link_to "Delete", booking_path(b),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-
+            <div class="d-flex flex-column align-items-center">
+              <div class="d-flex w-50 btn">
+                <%= link_to "Edit Booking", edit_booking_path(b) %>
+              </div>
+              <div class="d-flex w-50 btn">
+                <%= link_to "Delete", booking_path(b), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+              </div>
             </div>
           </p>
         </div>
