@@ -112,12 +112,11 @@ body{
 .image.car-image-img-fluid,
 .car-div,
 .best-price {
-  padding: 7px;
+  padding: 20px 20px 20px 0;
 }
 
-.best-price {
-  padding-left: 20px;
-}
+// .best-price {
+// }
 
 .vehicle-pricing {
   border-bottom: 1px solid rgba($white, 0.2); // Using white for subtle contrast
@@ -138,7 +137,8 @@ body{
 
 .car-image {
   height: 150px;
-  width: 100%;
+  width: 245px;
+  object-fit: cover;
 }
 
 .searchbar {
@@ -148,4 +148,9 @@ body{
 
 .full-car-card {
   padding: 0 40px;
+}
+
+.icsize {
+  width:30px ;
+  height:30px ;
 }

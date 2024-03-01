@@ -20,21 +20,31 @@
   <% @cars.each do |car| %>
     <div class="col-md-6">
       <div class="car-card">
-        <div class="car-card-body d-flex">
+        <div class="car-card-body d-flex justify-content-between">
           <!-- Car image column -->
-          <div class="col-md-4 car-div">
+          <div class="col-md-10 car-div d-flex">
             <% if car.photos.first.present? %>
               <%= cl_image_tag car.photos.first.key, alt: "#{car.brand} #{car.model}", width: "300px", height: "300px", class: "car-image " %>
             <% else %>
               <%= image_tag asset_path("img car.png"), alt: "#{car.brand} #{car.model}", class: "car-image img-fluid" %>
             <% end %>
+             <div class="description-title">
+                <h5 class="car-card-title"><%= "#{car.brand} #{car.model}" %></h5>
+                <div class="d-flex">
+                  <div class="d-flex">
+                    <%= image_tag asset_path("manual-transmission.png"), class: "icsize" %>
+                   <p class="ps-2"><%= car.automatic ? "Automatic" : "Manual"%></p>
+                  </div>
+                  <div class="d-flex ps-3">
+                    <%= image_tag asset_path("car-seat.png"), class: "icsize" %>
+                    <p class="ps-2 "><%= "#{car.seats}"%></p>
+                  </div>
+                </div>
+              </div>
           </div>
             <!-- Car details column -->
-            <div class="col-md-8 d-flex">
-              <div class="description-title">
-                <h5 class="car-card-title"><%= "#{car.brand} #{car.model}" %></h5>
-                <p class="car-card-text">Description about the car goes here.</p>
-              </div>
+            <div class="col-md-2 d-flex justify-content-end">
+
               <div class="text-end best-price">
                 <p class="vehicle-pricing">BEST PRICE</p>
                 <p class="price-text">£<%= "#{car.price_per_day.round} / day" %></p>
