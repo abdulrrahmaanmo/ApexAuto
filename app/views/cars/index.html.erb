@@ -11,8 +11,7 @@
             class: "form-control",
             placeholder: "Type a keyword"
         %>
-
-      <%= submit_tag "Search" , name: "", class: "btn  btnf" %>
+      <%= submit_tag "Search" , name: "", class: "btn btn-fcard" %>
     <% end %>
   </div>
 </div>
@@ -40,7 +39,9 @@
                 <p class="vehicle-pricing">BEST PRICE</p>
                 <p class="price-text">£<%= "#{car.price_per_day}/day" %></p>
 
-                <%= link_to "Select", car_path(car), class: "btn btnf " %>
+
+                <%= link_to "Select", car_path(car), class: "btn btn-fcard" %>
+
               </div>
             </div>
           </div>
