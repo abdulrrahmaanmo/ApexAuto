@@ -3,7 +3,7 @@
     <h1 class="headerone"> Cars Available: <small class="results-count"><%= @cars.length %> Results</small></h1>
 
   </div>
-  <div class="row justify-content-center">
+  <div class="row justify-content-center searchbar">
   <div class="col-sm-8 my-3">
     <%= form_with url: cars_path, method: :get, class: "d-flex" do %>
       <%= text_field_tag :query,
@@ -11,13 +11,13 @@
             class: "form-control",
             placeholder: "Type a keyword"
         %>
-        
-      <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
+
+      <%= submit_tag "Search" , name: "", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-<div class="row">
+<div class="row full-car-card">
   <% @cars.each do |car| %>
     <div class="col-md-6">
       <div class="car-card">

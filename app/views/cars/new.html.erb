@@ -1,14 +1,65 @@
-<h1>Rent Out Your SuperCar</h1>
-<%= simple_form_for [@car] do |f| %>
-  <%= f.input :brand %>
-  <%= f.input :model %>
-  <%= f.input :seats %>
-  <%= f.input :fuel_type %>
-  <%= f.input :price_per_day %>
-  <%= f.input :automatic %>
-  <%= f.input :bluetooth %>
-  <%= f.input :color %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true }%>
+<div class="page1">
+  <div class="page-wrapper">
+    <h1 class="rent-out-header">Rent Out Your SuperCar</h1>
+    <form>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group mb-3 g1">
+            <label for="brand">Brand</label>
+            <%= text_field_tag "brand", nil, class: "form-control f1", id: "brand", placeholder: "Enter car brand" %>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group mb-3 g1">
+            <label for="model">Model</label>
+            <%= text_field_tag "model", nil, class: "form-control f1", id: "model", placeholder: "Enter car model" %>
+          </div>
+        </div>
+      </div>
 
-  <%= f.submit "Confirm", class: "btn btn-primary" %>
-<% end %>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group mb-3 g1">
+            <label for="seats">Seats</label>
+            <%= number_field_tag "seats", nil, class: "form-control f1", id: "seats", placeholder: "Number of seats" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group mb-3 g1">
+            <label for="fuelType">Fuel Type</label>
+            <%= select_tag "fuelType", options_for_select(["Choose...", "Petrol", "Diesel", "Electric"]), class: "form-select s1", id: "fuelType" %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group mb-3 g1">
+            <label for="pricePerDay">Price per day</label>
+            <%= text_field_tag "pricePerDay", nil, class: "form-control f1", id: "pricePerDay", placeholder: "Enter price per day" %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-check mb-3 g1">
+        <%= check_box_tag "automatic", "1", false, class: "form-check-input inp", id: "automatic" %>
+        <%= label_tag "automatic", "Automatic", class: "form-check-label fcl" %>
+      </div>
+
+      <div class="form-check mb-3 g1">
+        <%= check_box_tag "bluetooth", "1", false, class: "form-check-input inp", id: "bluetooth" %>
+        <%= label_tag "bluetooth", "Bluetooth", class: "form-check-label fcl" %>
+      </div>
+
+      <div class="form-group mb-3 g1">
+        <label for="color">Color</label>
+        <%= text_field_tag "color", nil, class: "form-control f1", id: "color", placeholder: "Enter car color" %>
+      </div>
+
+      <div class="form-group mb-3 g1">
+        <label for="photos">Photos</label>
+        <%= file_field_tag "photos[]", multiple: true, class: "form-control f1", id: "photos" %>
+      </div>
+
+      <%= submit_tag "Confirm", class: "btn btn-primary confirm-btn" %>
+  </div>
+  <div class="banner-rent-out" style="background-image: url('<%= asset_path('caresoul img 3.jpg') %>');"> </div>
+
+</div>
