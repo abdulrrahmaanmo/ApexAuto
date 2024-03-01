@@ -22,23 +22,23 @@ file1 = URI.open("https://modelkars.com/wp-content/uploads/GT414-AUDI-RS3-SEDAN-
 file1p = URI.open("https://hips.hearstapps.com/hmg-prod/images/2024-audi-rs3-102-64a59d6780ff7.jpg?crop=0.872xw:0.799xh;0.0656xw,0.189xh&resize=980:*")
 file1pp = URI.open("https://www.autocar.co.uk/sites/autocar.co.uk/files/styles/body-image/public/88-audi-rs3-2021-official-reveal-saloon-interior.jpg?itok=dlfIUG8K")
 
-file2 = URI.open("https://p7.hiclipart.com/preview/108/816/868/2017-bmw-i8-2016-bmw-i8-car-2015-bmw-i8-bmw.jpg")
+file2 = URI.open("https://static.wikia.nocookie.net/jetix-academy/images/5/54/20151526_201408.jpg/revision/latest?cb=20200202154403")
 file2p = URI.open("https://www.autocar.co.uk/sites/autocar.co.uk/files/images/car-reviews/first-drives/legacy/2-bmw-i8-coupe-2018-uk-fd-hero-rear.jpg")
 file2pp = URI.open("https://car-images.bauersecure.com/wp-images/1646/zbmw-078.jpg")
 
-file3 = URI.open("https://i.pinimg.com/736x/e2/48/b0/e248b03b5280b4af6148f47acc1f32a4.jpg")
-file3p = URI.open("https://hips.hearstapps.com/hmg-prod/images/2022-bmw-x5-black-vermilion-edition-103-1625852653.jpg?crop=1.00xw:0.918xh;0,0.0383xh&resize=980:*")
+file3 = URI.open("https://img.freepik.com/premium-photo/car-isolated-white-background-bmw-x5-white-car-blank-clean-white-background-tu-white-black_655090-606277.jpg")
+file3p = URI.open("https://www.wardsauto.com/sites/wardsauto.com/files/BMW%20X5%20rear%20quarter%20white_0.jpg")
 file3pp = URI.open("https://i.pinimg.com/originals/73/db/37/73db3776e930bd372550227d34540630.jpg")
 
-file4 = URI.open("https://i.pinimg.com/originals/3c/65/e4/3c65e4cffa9ea30773735a969cdf87d0.png")
-file4p = URI.open("https://images.caricos.com/a/audi/2019_audi_r8/images/2560x1440/2019_audi_r8_48_2560x1440.jpg")
+file4 = URI.open("https://images.hgmsites.net/lrg/2011-audi-r8-2-door-coupe-5-2l-man-quattro-angular-front-exterior-view_100320777_l.jpg")
+file4p = URI.open("https://media.autoexpress.co.uk/image/private/s--elEXBEmj--/v1673352138/evo/2023/01/Audi%20R8%20RWD%20Performance%20eCoty%20images-4.jpg")
 file4pp = URI.open("https://i.pinimg.com/736x/3b/de/b4/3bdeb4829f2b8c11f049605fa37b77ab.jpg")
 
-file5 = URI.open("https://www.extravagantforeigns.com/wp-content/uploads/2023/05/9-IMG_1105-removebg-preview.png")
-file5p = URI.open("https://hips.hearstapps.com/hmg-prod/images/2023-lamborghini-urus-performante-142-1665754343.jpg?crop=0.671xw:1.00xh;0.282xw,0&resize=1200:*")
+file5 = URI.open("https://images.dealer.com/ddc/vehicles/2021/Lamborghini/Urus/SUV/color/Bianco%20Monocerus-T9T9-234,234,226-640-en_US.jpg")
+file5p = URI.open("https://media.evo.co.uk/image/private/s--gVFpk2YS--/v1606220408/evo/2020/11/Lamborghini%20Urus%20review%20new-6.jpg")
 file5pp = URI.open("https://parkers-images.bauersecure.com/wp-images/286/675x450/lamborghini-urus-04.jpg")
 
-file6 = URI.open("https://banner2.cleanpng.com/20180602/byf/kisspng-lamborghini-aventador-lamborghini-gallardo-2015-la-5b1257e4425af4.0087448115279288042718.jpg")
+file6 = URI.open("https://images.dcperformance.co.uk/cars/gallardo.jpg")
 file6p = URI.open("https://car-images.bauersecure.com/wp-images/1733/zlambo-004.jpg")
 file6pp = URI.open("https://gvelondon.com/wp-content/uploads/2023/11/5X3A1570-scaled-1.jpg")
 
@@ -46,7 +46,7 @@ file7 = URI.open("https://i.pinimg.com/originals/ac/c4/c8/acc4c85822a571b562b6b4
 file7p = URI.open("https://car-images.bauersecure.com/wp-images/4084/amggt_black_086.jpg")
 file7pp = URI.open("https://car-images.bauersecure.com/wp-images/4653/mercedessl_102.jpg")
 
-file8 = URI.open("https://i.pinimg.com/originals/53/25/72/532572dd9912c378cc31e048ff42cb04.png")
+file8 = URI.open("https://i0.wp.com/www.motorsportmaranello.com/wp-content/uploads/2019/12/test-drive-noleggio-ferrari-488-gts-3-.jpg?fit=1200%2C1200&ssl=1")
 file8p = URI.open("https://live.staticflickr.com/457/18123004660_3074b06020_b.jpg")
 file8pp = URI.open("https://hips.hearstapps.com/autoweek/assets/s3fs-public/3lor8595.jpg")
 
@@ -60,7 +60,7 @@ file10pp = URI.open("https://parkers-images.bauersecure.com/wp-images/268/main-i
 
 car_1 = Car.new(price_per_day: 125.00, model: "rs3", brand: "Audi", seats: 5, color: "Green", automatic: false, bluetooth: true, fuel_type: "Petrol")
 car_1.user = user
-car_1.photos.attach(io: file1, filename: "rs3Small.jpeg", content_type: "image/jpeg")
+ car_1.photos.attach(io: file1, filename: "rs3Small.jpeg", content_type: "image/jpeg")
 car_1.photos.attach(io: file1p, filename: "2nd photo", content_type: "image/jpeg")
 car_1.photos.attach(io: file1pp, filename: "2nd photo", content_type: "image/jpeg")
 car_1.save!
@@ -72,21 +72,21 @@ car_2.photos.attach(io: file2p, filename: "i8greySmall.jpeg", content_type: "ima
 car_2.photos.attach(io: file2pp, filename: "i8greySmall.jpeg", content_type: "image/jpeg")
 car_2.save!
 
-car_3 = Car.new(price_per_day: 100.00, model: "X5", brand: "BMW", seats: 5, color: "Black", automatic: false, bluetooth: true, fuel_type: "Petrol")
+car_3 = Car.new(price_per_day: 100.00, model: "X5", brand: "BMW", seats: 5, color: "White", automatic: false, bluetooth: true, fuel_type: "Petrol")
 car_3.user = user
 car_3.photos.attach(io: file3, filename: "x5black.jpeg", content_type: "image/jpeg")
 car_3.photos.attach(io: file3p, filename: "x5black.jpeg", content_type: "image/jpeg")
 car_3.photos.attach(io: file3pp, filename: "x5black.jpeg", content_type: "image/jpeg")
 car_3.save!
 
-car_4 = Car.new(price_per_day: 99.99, model: "r8", brand: "Audi", seats: 2, color: "Grey", automatic: true, bluetooth: true, fuel_type: "Diesel")
+car_4 = Car.new(price_per_day: 99.99, model: "r8", brand: "Audi", seats: 2, color: "Blue", automatic: true, bluetooth: true, fuel_type: "Diesel")
 car_4.user = user
 car_4.photos.attach(io: file4, filename: "r8greySmall.jpeg", content_type: "image/jpeg")
 car_4.photos.attach(io: file4p, filename: "r8greySmall.jpeg", content_type: "image/jpeg")
 car_4.photos.attach(io: file4pp, filename: "r8greySmall.jpeg", content_type: "image/jpeg")
 car_4.save!
 
-car_5 = Car.new(price_per_day: 250.00, model: "Urus", brand: "Lamborghini", seats: 5, color: "Purple", automatic: true, bluetooth: true, fuel_type: "Petrol")
+car_5 = Car.new(price_per_day: 250.00, model: "Urus", brand: "Lamborghini", seats: 5, color: "White", automatic: true, bluetooth: true, fuel_type: "Petrol")
 car_5.user = user
 car_5.photos.attach(io: file5, filename: "purpleurusSmall.jpeg", content_type: "image/jpeg")
 car_5.photos.attach(io: file5p, filename: "purpleurusSmall.jpeg", content_type: "image/jpeg")
@@ -133,6 +133,6 @@ Location.create(address: "Shoreditch")
 Location.create(address: "Woodford Green")
 Location.create(address: "Seven Sisters")
 
-puts "Abduls the Gaffer"
+puts "Finished"
 
 #   end

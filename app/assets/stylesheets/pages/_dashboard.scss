@@ -17,6 +17,8 @@
 
   .card-name, .card-script {
     color: $orange;
+    font-size: large;
+    font-weight: bold;
   }
   .card-content {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -27,7 +29,8 @@
   }
 
   .list-header, .booking-header {
-    color: black;
+    color: $orange;
+    font-style: italic;
   }
   .list-header, .booking-header:hover{
     text-shadow: 0 6px 12px rgba($white, 0.5);
@@ -36,9 +39,9 @@
     border: 1px solid;
     border-radius: 10px;
     background-color: orange;
-    justify-content: space-between;
+    justify-content: center;
     padding: 2%;
     margin-bottom: 3px;
-    text-decoration: none;
     color:black;
-  }
+    text-decoration: none;
+    }
