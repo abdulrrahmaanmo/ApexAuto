@@ -45,7 +45,7 @@ file7 = URI.open("https://i.pinimg.com/originals/ac/c4/c8/acc4c85822a571b562b6b4
 file7p = URI.open("https://car-images.bauersecure.com/wp-images/4084/amggt_black_086.jpg")
 file7pp = URI.open("https://car-images.bauersecure.com/wp-images/4653/mercedessl_102.jpg")
 
-file8 = URI.open("https://i0.wp.com/www.motorsportmaranello.com/wp-content/uploads/2019/12/test-drive-noleggio-ferrari-488-gts-3-.jpg?fit=1200%2C1200&ssl=1")
+file8 = URI.open("https://i.pinimg.com/736x/e7/2d/5e/e72d5ed51994f0c2ade2eed491ba8d33.jpg")
 file8p = URI.open("https://live.staticflickr.com/457/18123004660_3074b06020_b.jpg")
 file8pp = URI.open("https://hips.hearstapps.com/autoweek/assets/s3fs-public/3lor8595.jpg")
 
