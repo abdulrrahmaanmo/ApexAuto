@@ -1,0 +1,35 @@
+.body-page{
+  background-color: $deep-blue;
+  max-width: 100%;
+  min-height: 100vh ;
+}
+
+.page-title {
+  text-justify: center;
+  margin-left: 500px;
+  $font-montserrat: 'Montserrat', sans-serif;
+  $font-roboto: 'Roboto', sans-serif;
+  color: $orange;
+  font-weight: bolder;
+  padding-top: 200px;
+}
+.page-title :hover{
+  text-shadow: 0 6px 12px rgba($white, 0.5);
+}
+
+.form-label {
+  color: $white;
+  $font-montserrat: 'Montserrat', sans-serif;
+  $font-roboto: 'Roboto', sans-serif;
+  font-weight: bold;
+
+}
+.form{
+  padding: 20px;
+  margin-left: 100px;
+}
+.btn{
+  $font-montserrat: 'Montserrat', sans-serif;
+  $font-roboto: 'Roboto', sans-serif;
+  font-weight: bold;
+}
