@@ -1,6 +1,6 @@
 
 .background-page {
-    background-color: $gray;
+    background-color: $deep-blue;
     color: $black;
   }
   .booking-card, .listing-card {
@@ -10,16 +10,23 @@
     transition: box-shadow 0.3s ease;
     margin-bottom: 40px;
     position: relative;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    padding: 5%;
+    $font-montserrat: 'Montserrat', sans-serif;
+    $font-roboto: 'Roboto', sans-serif;
+    padding: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-inline-start: 20px;
   }
 
 
   .card-name, .card-script {
     color: $orange;
+    font-size: large;
+    font-weight: bold;
   }
   .card-content {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    $font-montserrat: 'Montserrat', sans-serif;
+    $font-roboto: 'Roboto', sans-serif;
   }
 
   .booking-card, .listing-card:hover {
@@ -27,7 +34,8 @@
   }
 
   .list-header, .booking-header {
-    color: black;
+    color: $orange;
+    font-style: italic;
   }
   .list-header, .booking-header:hover{
     text-shadow: 0 6px 12px rgba($white, 0.5);
@@ -35,10 +43,13 @@
   .btn {
     border: 1px solid;
     border-radius: 10px;
-    background-color: orange;
-    justify-content: space-between;
+    background-color: $orange;
+    justify-content: center;
     padding: 2%;
     margin-bottom: 3px;
-    text-decoration: none;
     color:black;
+    a {
+    text-decoration: none;
+    color: black;
+     }
   }

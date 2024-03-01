@@ -1,5 +1,6 @@
+<div class="body-page">
 <div class="container">
-  <h1>New Booking</h1>
+  <h1 class="page-title">New Booking</h1>
   <%= simple_form_for [@car, @booking] do |f| %>
     <div data-controller='date-picker'>
 
@@ -11,7 +12,9 @@
       <%= f.input :start_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'start'} } %>
       <%= f.input :end_date, as: :string, wrapper_html: {style: 'display: none'}, input_html: { data: { date_picker_target: 'end'} }  %>
     </div>
-      <%= f.association :location, collection: Location.pluck(:address, :id) %>
+
+      <%= f.association :location, collection: Location.pluck(:address, :id)%>
       <%= f.submit "Submit Booking", class: "btn btn-primary" %>
   <% end %>
+</div>
 </div>
