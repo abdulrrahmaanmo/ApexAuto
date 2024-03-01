@@ -2,18 +2,20 @@
 <div class="page1">
   <div class="page-wrapper">
     <h1 class="rent-out-header">Rent Out Your SuperCar</h1>
-    <form>
+
+    <%= simple_form_for @car do |f| %>
       <div class="row">
         <div class="col-md-6">
           <div class="form-group mb-3 g1">
             <label for="brand">Brand</label>
-            <%= text_field_tag "brand", nil, class: "form-control f1", id: "brand", placeholder: "Enter car brand" %>
+            <%= f.input :brand, placeholder: "Enter car brand", label: false, input_html: { class: "form-control f1", id: "brand" } %>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group mb-3 g1">
             <label for="model">Model</label>
-            <%= text_field_tag "model", nil, class: "form-control f1", id: "model", placeholder: "Enter car model" %>
+            <%= f.input :model, placeholder: "Enter car model", label: false, input_html: { class: "form-control f1", id: "model" } %>
+
           </div>
         </div>
       </div>
@@ -22,44 +24,46 @@
         <div class="col-md-4">
           <div class="form-group mb-3 g1">
             <label for="seats">Seats</label>
-            <%= number_field_tag "seats", nil, class: "form-control f1", id: "seats", placeholder: "Number of seats" %>
+            <%= f.input :seats, placeholder: "Number of seats", label: false, input_html: { class: "form-control f1", id: "seats" } %>
           </div>
         </div>
         <div class="col-md-4">
           <div class="form-group mb-3 g1">
             <label for="fuelType">Fuel Type</label>
-            <%= select_tag "fuelType", options_for_select(["Choose...", "Petrol", "Diesel", "Electric"]), class: "form-select s1", id: "fuelType" %>
+            <%= f.input :fuel_type, collection: ["Petrol", "Diesel", "Electric"], prompt: "Choose...", label: false, input_html: { class: "form-select f1", id: "fuelType" } %>
           </div>
         </div>
         <div class="col-md-4">
           <div class="form-group mb-3 g1">
             <label for="pricePerDay">Price per day</label>
-            <%= text_field_tag "pricePerDay", nil, class: "form-control f1", id: "pricePerDay", placeholder: "Enter price per day" %>
+            <%= f.input :price_per_day, placeholder: "Enter price per day", label: false, input_html: { class: "form-control f1", id: "pricePerDay" } %>
           </div>
         </div>
       </div>
 
+
       <div class="form-check mb-3 g1">
-        <%= check_box_tag "automatic", "1", false, class: "form-check-input inp", id: "automatic" %>
-        <%= label_tag "automatic", "Automatic", class: "form-check-label fcl" %>
+        <%= f.input :automatic, as: :check_boxes, placeholder: "Number of seats", label: false, input_html: { class: "form-check-input inp", id: "automatic" } %>
       </div>
 
       <div class="form-check mb-3 g1">
-        <%= check_box_tag "bluetooth", "1", false, class: "form-check-input inp", id: "bluetooth" %>
-        <%= label_tag "bluetooth", "Bluetooth", class: "form-check-label fcl" %>
+        <%#= label_tag "bluetooth", "Bluetooth", class: "form-check-label fcl" %>
+        <%= f.input :bluetooth, as: :check_boxes, label: false, input_html: { class: "form-check-input inp", id: "bluetooth" } %>
       </div>
 
       <div class="form-group mb-3 g1">
         <label for="color">Color</label>
-        <%= text_field_tag "color", nil, class: "form-control f1", id: "color", placeholder: "Enter car color" %>
+        <%= f.input :color, placeholder: "Enter car color", label: false, input_html: { class: "form-control f1", id: "color" } %>
       </div>
 
       <div class="form-group mb-3 g1">
         <label for="photos">Photos</label>
-        <%= file_field_tag "photos[]", multiple: true, class: "form-control f1", id: "photos" %>
+        <%#= file_field_tag "photos[]", multiple: true, class: "form-control f1", id: "photos" %>
+        <%= f.input :photos, as: :file, label: false, input_html: { class: "form-control f1", id: "photos", multiple: true } %>
       </div>
 
-      <%= submit_tag "Confirm", class: " confirm-btn" %>
+      <%= f.submit "Confirm", class: " confirm-btn" %>
+    <% end %>
   </div>
 
 </div>

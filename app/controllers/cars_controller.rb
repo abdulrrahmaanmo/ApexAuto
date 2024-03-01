@@ -7,7 +7,6 @@ class CarsController < ApplicationController
     end
   end
 
-
   def show
     @cars = Car.find(params[:id])
   end
@@ -19,8 +18,8 @@ class CarsController < ApplicationController
   def create
     @car = Car.new(car_params)
     @car.user = current_user
-    if @car.save!
-      redirect_to dashboard_path
+    if @car.save
+      redirect_to car_path(@car)
     else
       render :new, status: :unprocessable_entity
     end
