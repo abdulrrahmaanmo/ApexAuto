@@ -37,7 +37,7 @@
               </div>
               <div class="text-end best-price">
                 <p class="vehicle-pricing">BEST PRICE</p>
-                <p class="price-text">£<%= "#{car.price_per_day}/day" %></p>
+                <p class="price-text">£<%= "#{car.price_per_day.round} / day" %></p>
 
 
                 <%= link_to "Select", car_path(car), class: "btn-fcard" %>
